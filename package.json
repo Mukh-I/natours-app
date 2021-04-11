@@ -4,10 +4,11 @@
   "description": "nodejs bootcamp",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "prod": "cross-env NODE_ENV=production nodemon server.js",
-    "dev": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "dev:parcel": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "",
   "license": "ISC",

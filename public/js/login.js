@@ -3,7 +3,7 @@ import axios from 'axios';
 import { showAlert } from './alert';
 
 export const login = async (email, password) => {
-  console.log('login');
+  // console.log('login');
   try {
     const res = await axios({
       method: 'POST',
@@ -20,7 +20,7 @@ export const login = async (email, password) => {
       }, 1500);
     }
   } catch (err) {
-    console.log(err.response);
+    // console.log(err.response);
     showAlert('error', err.response.data.message);
   }
 };
@@ -32,7 +32,7 @@ export const logout = async () => {
       url: '/api/v1/users/logout'
     });
 
-    console.log(res);
+    // console.log(res);
     if (res.status === 200) {
       location.reload(true);
     }

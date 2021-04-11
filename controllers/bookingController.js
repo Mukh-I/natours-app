@@ -4,7 +4,6 @@ const catchErrorFunc = require('./../utils/catchErrorFunc');
 //const AppError = require('./../utils/appError');
 
 exports.getCheckoutSession = catchErrorFunc(async (req, res, next) => {
-  console.log('B', process.env.STRIPE_SECRET_KEY)
   const tour = await Tour.findById(req.params.tourId);
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
